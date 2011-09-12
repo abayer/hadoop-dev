@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>dfs.datanode.address</name>
+  <value>0.0.0.0:0</value>
+</property>
+<property>
+  <name>dfs.datanode.http.address</name>
+  <value>0.0.0.0:0</value>
+</property>
+<property>
+  <name>dfs.datanode.ipc.address</name>
+  <value>0.0.0.0:0</value>
+</property>
+<property>
+  <name>dfs.name.dir</name>
+  <value>_ROOT_/dfs/name1,_ROOT_/dfs/name2,_ROOT_/dfs/name3</value>
+</property>
+<property>
+  <name>dfs.data.dir</name>
+  <value>_ROOT_/dfs/data1,_ROOT_/dfs/data2,_ROOT_/dfs/data3</value>
+</property>
+<property>
+  <name>fs.checkpoint.dir</name>
+  <value>_ROOT_/dfs/chkpoint1,_ROOT_/dfs/chkpoint2</value>
+</property>
+<property>
+  <name>dfs.heartbeat.interval</name>
+  <value>1</value>
+</property>
+<property>
+  <name>dfs.datanode.failed.volumes.tolerated</name>
+  <value>1</value>
+</property>
+</configuration>

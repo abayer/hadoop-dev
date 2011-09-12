@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>mapred.task.tracker.http.address</name>
+  <value>0.0.0.0:0</value>
+</property>
+<property>
+  <name>mapred.job.tracker</name>
+  <value>localhost:10000</value>
+</property>
+<property>
+  <name>mapred.local.dir</name>
+  <value>_ROOT_/mapred/local1,_ROOT_/mapred/local2,_ROOT_/mapred/local3</value>
+</property>
+<property>
+  <name>mapred.system.dir</name>
+  <value>/user/_USER_/mapred/system</value>
+</property>
+<property>
+  <name>mapreduce.jobtracker.staging.root.dir</name>
+  <value>/user/_USER_/mapred/staging</value>
+</property>
+<property>
+  <name>mapred.temp.dir</name>
+  <value>/user/_USER_/mapred/temp</value>
+</property>
+<!--
+<property>
+  <name>mapreduce.tasktracker.group</name>
+  <value>mapred</value>
+</property>
+<property>
+  <name>mapred.task.tracker.task-controller</name>
+  <value>org.apache.hadoop.mapred.LinuxTaskController</value>
+</property>
+-->
+</configuration>
