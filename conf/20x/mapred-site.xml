@@ -15,7 +15,7 @@
 </property>
 <property>
   <name>mapred.system.dir</name>
-  <value>/user/_USER_/mapred/system</value>
+  <value>/mapred/system</value>
 </property>
 <property>
   <name>mapreduce.jobtracker.staging.root.dir</name>
@@ -25,7 +25,6 @@
   <name>mapred.temp.dir</name>
   <value>/user/_USER_/mapred/temp</value>
 </property>
-<!--
 <property>
   <name>mapreduce.tasktracker.group</name>
   <value>mapred</value>
@@ -34,5 +33,8 @@
   <name>mapred.task.tracker.task-controller</name>
   <value>org.apache.hadoop.mapred.LinuxTaskController</value>
 </property>
--->
+<property>
+  <name>mapreduce.tasktracker.task-controller.exe</name>
+  <value>_ROOT_/bin/task-controller</value>
+</property>
 </configuration>
