@@ -2,11 +2,17 @@
 
 HADOOP_VERSION=hadoop-0.20.207.0-SNAPSHOT
 HADOOP_SRC=/home/eli/src/cloudera/hadoop1
+HADOOP_TARBALL=$HADOOP_SRC/build/$HADOOP_VERSION.tar.gz
 DEPLOY_BASE=/deploy
 HADOOP_HOME=$DEPLOY_BASE/$HADOOP_VERSION
 USER=eli
 
 . util.sh
+
+# Build the tarball
+pushd $HADOOP_SRC
+ant tar -Djava5.home=$JAVA5_HOME -Dforrest.home=$FORREST_HOME
+popd
 
 # Create and deploy hadoop configuration
 deploy_hadoop $USER
@@ -40,6 +46,7 @@ run_cmd fs -lsr /
 exec_mr start
 
 J=$HADOOP_HOME/hadoop-examples-*.jar
+run_cmd fs -rmr /user/$USER/PiEstimator*
 run_cmd jar $J pi -Dmapred.map.tasks=3 2 10
 
 # Restart the daemons and run the job again

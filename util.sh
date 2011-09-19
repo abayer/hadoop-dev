@@ -7,14 +7,11 @@
 function deploy_hadoop () {
     local user=$1
     # Create the deployment dir
-    pushd $HADOOP_SRC
-    ant tar -Djava5.home=$JAVA5_HOME -Dforrest.home=$FORREST_HOME
-    popd
     if [ -d "$HADOOP_HOME" ]; then
         sudo rm -rf $HADOOP_HOME
     fi
     sudo chown -R $user:$user $DEPLOY_BASE
-    tar -xzf $HADOOP_SRC/build/$HADOOP_VERSION.tar.gz -C $DEPLOY_BASE
+    tar -xzf $HADOOP_TARBALL -C $DEPLOY_BASE
     # Create dirs and configs for each pseudo host
     for dir in dir-nn dir-2nn dir-jt dir-s1 dir-s2 dir-s3
     do
