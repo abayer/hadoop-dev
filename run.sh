@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HADOOP_VERSION=hadoop-0.20.207.0-SNAPSHOT
+HADOOP_VERSION=hadoop-0.20.206.0-SNAPSHOT
 HADOOP_SRC=/home/eli/src/cloudera/hadoop1
 HADOOP_TARBALL=$HADOOP_SRC/build/$HADOOP_VERSION.tar.gz
 DEPLOY_BASE=/deploy
@@ -10,9 +10,9 @@ USER=eli
 . util.sh
 
 # Build the tarball
-pushd $HADOOP_SRC
-ant tar -Djava5.home=$JAVA5_HOME -Dforrest.home=$FORREST_HOME
-popd
+#pushd $HADOOP_SRC
+#ant tar -Djava5.home=$JAVA5_HOME -Dforrest.home=$FORREST_HOME
+#popd
 
 # Create and deploy hadoop configuration
 deploy_hadoop $USER

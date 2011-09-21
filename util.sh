@@ -21,10 +21,12 @@ function deploy_hadoop () {
         fi
         mkdir $dir_path
         cp -r conf/20x $dir_path/conf
+        sed -i "s/_USER_/$user/g" $dir_path/conf/*
+        sed -i "s/_FAULTY_ROOT_/\/faulty\/$dir/g" \
+            $dir_path/conf/*
         # xx Use HADOOP_HOME 
         sed -i "s/_ROOT_/\/deploy\/$HADOOP_VERSION\/$dir/g" \
             $dir_path/conf/*
-        sed -i "s/_USER_/$user/g" $dir_path/conf/*
         sudo chown root:hadoop $dir_path/conf
         for d in bin tmp logs pids dfs mapred
         do

@@ -11,7 +11,7 @@
 </property>
 <property>
   <name>mapred.local.dir</name>
-  <value>_ROOT_/mapred/local1,_ROOT_/mapred/local2,_ROOT_/mapred/local3</value>
+  <value>_FAULTY_ROOT_/mapred/local1,_FAULTY_ROOT_/mapred/local2</value>
 </property>
 <property>
   <name>mapred.system.dir</name>
