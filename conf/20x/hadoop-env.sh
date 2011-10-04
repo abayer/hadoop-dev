@@ -6,7 +6,7 @@
 # remote nodes.
 
 # The java implementation to use.  Required.
-export JAVA_HOME=/home/eli/toolchain/jdk1.6.0_24-x64
+export JAVA_HOME=${JAVA_HOME:-/home/eli/toolchain/jdk1.6.0_24-x64}
 
 # Extra Java CLASSPATH elements.  Optional.
 # export HADOOP_CLASSPATH="<extra_entries>:$HADOOP_CLASSPATH"
